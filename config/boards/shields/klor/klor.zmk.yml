@@ -3,7 +3,7 @@ id: klor
 name: KLOR
 type: shield
 url: https://github.com/GEIGEIGEIST/KLOR
-requires: [pro_micro]
+requires: [pro_micro xiao_ble]
 exposes: [i2c_oled]
 features:
   - keys
