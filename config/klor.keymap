@@ -129,7 +129,7 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                base_layer {
+            base_layer {
 // ┌───────────────────────────────────────────────────────────┐
 label= "BASE"                                                  ;
 // └───────────────────────────────────────────────────────────┘
@@ -142,15 +142,76 @@ label= "BASE"                                                  ;
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │  LALT   │  LOWER  │  RALT   │  SPACE  ││  BSPCE  │  ENTER  │  RAISE  │    DEL  │
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
-  bindings = <
-    &kp B  &kp Y  &kp D         &kp L         &kp SQT  &kp Q      &kp F  &kp O  &kp U  &kp SEMICOLON
-    &kp C  &kp S  &hml LCTRL T  &hml LSHFT R  &kp X    &kp J      &hmr LSHFT N  &hmr RCTRL A  &kp I     &kp H
-    &kp V  &kp W  &kp G         &kp M         &kp Z    &kp MINUS  &kp P         &kp COMMA       &kp DOT &kp K
-            &mt LGUI TAB &kp SPACE  &lt NAV ESC        &lt SYM F1 &kp E  &kp SQT
-            >;
+        bindings = <
+        &kp B  &kp Y  &kp D         &kp L         &kp SQT  &kp Q      &kp F  &kp O  &kp U  &kp SEMICOLON
+        &kp C  &kp S  &hml LCTRL T  &hml LSHFT R  &kp X    &kp J      &hmr LSHFT N  &hmr RCTRL A  &kp I     &kp H
+        &kp V  &kp W  &kp G         &kp M         &kp Z    &kp MINUS  &kp P         &kp COMMA       &kp DOT &kp K
+                &mt LGUI TAB &kp SPACE  &lt NAV ESC        &lt SYM F1 &kp E  &kp SQT
+                >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_AC_FORWARD C_AC_BACK>;
-                };
+            };
 
+      nav_layer {
+        label = "NAV";
+        bindings = <
+        &kp LS(GRAVE)     &kp F2      &kp F3    &kp F4     &kp F5           &trans  &kp KP_ASTERISK  &kp KP_PLUS  &kp LS(BACKSLASH)  &kp LS(N7)
+        &kp LS(N1) &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &kp PG_UP  &kp EQUAL  &kp LS(MINUS)  &kp MINUS  &kp LS(N1)
+        &trans    &trans   &trans  &trans  &trans                   &kp PG_DN  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                            &kp LC(BACKSPACE) &kp BACKSPACE &trans   &mo ADJ   &kp RET &kp DEL
+            >;
+      };
+
+      sym_layer {
+        label = "SYM";
+
+        bindings = <
+        &kp TAB    &kp LS(N2)   &kp LBKT  &kp RBKT  &trans         &trans     &trans      &trans   &kp F11     &kp F12
+        &kp RA(COMMA)   &kp LS(N3)   &kp LBRC  &kp RBRC &kp HOME   &kp LS(N6)   &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
+        &trans  &kp LS(N9)  &a_tilde   &kp LS(N0)    &kp END       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &trans
+                                  &kp LC(BACKSPACE) &kp BACKSPACE  &mo ADJ      &trans        &kp C_PP        &trans
+            >;
+      };
+
+      adjust_layer {
+        label = "ADJ";
+
+        bindings = <
+            &kp GRAVE &trans  &trans  &trans  &kp C_AL_FILE_BROWSER    &trans  &trans &trans &trans  &to GAME
+            &kp N1  &kp N2  &kp N3  &kp N4  &kp N5           &kp N6  &kp N7  &kp N8 &kp N9 &kp N0
+            &studio_unlock  &kp LA(LG(LEFT_ARROW))  &trans  &kp LA(LG(RIGHT_ARROW))  &kp C_AC_HOME    &kp PRINTSCREEN  &trans &kp COMMA &kp DOT &caps_word
+                                    &trans        &trans  &trans    &trans  &trans  &trans
+        >;
+      };
+
+      numpad_layer {
+        label = "NUMPAD";
+        bindings = <
+        &trans  &trans  &trans &trans  &trans    &trans  &kp N7  &kp N8 &kp N9  &trans
+        &trans  &trans  &trans &trans  &trans    &trans  &kp N4  &kp N5 &kp N6  &trans
+        &trans  &trans  &trans &trans  &trans    &trans  &kp N1  &kp N2 &kp N3  &trans
+                              &trans  &trans  &to BASE    &trans  &kp N0  &kp PERIOD
+          >;
+      };
+
+      mouse_layer {
+        label = "MOUSE";
+        bindings = <
+        &trans  &trans         &msc SCRL_UP    &trans           &trans    &trans  &mkp LCLK &mmv MOVE_UP &mkp RCLK  &trans
+        &trans  &msc SCRL_LEFT &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans    &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &trans
+        &trans  &trans         &trans          &trans           &trans    &trans  &trans  &mkp MCLK &trans  &trans
+                                &trans  &trans  &trans           &trans    &trans  &trans
+          >;
+      };
+
+      game_layer {
+        label = "GAME";
+        bindings = <
+      &kp B  &kp Y  &kp D  &kp L     &kp Q      &kp Q      &kp F  &kp O   &kp U     &kp SEMICOLON
+      &kp C  &kp S  &kp T  &kp R     &kp X        &kp J      &kp N  &kp A   &kp I     &kp H
+      &kp V  &kp W  &kp G  &kp M     &kp Z        &kp MINUS  &kp P  &kp DOT &kp COMMA &to BASE
+                &kp LCTRL  &kp SPACE &lt NAV ESC  &lt SYM F1 &kp E  &kp RET
+          >;
+      };
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
      };
 };
