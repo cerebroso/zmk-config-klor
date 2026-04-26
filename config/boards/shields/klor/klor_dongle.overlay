@@ -30,7 +30,7 @@
             , <&key_physical_attrs 100 100  500   66    0     0     0>
             , <&key_physical_attrs 100 100  985   66    0     0     0>
             , <&key_physical_attrs 100 100  1085  50    0     0     0>
-            , <&key_physical_attrs 100 100  1185  50    0     0     0>
+            , <&key_physical_attrs 100 100  1185  0    0     0     0>
             , <&key_physical_attrs 100 100  1300  60    400     1350     110>
             , <&key_physical_attrs 100 100 1412   152   1000     1462     202>
 
@@ -46,7 +46,7 @@
             , <&key_physical_attrs 100 100  1395 250       1000  1445  300>
 
             , <&key_physical_attrs 100 100  106  349       (-1000) 156    399>
-            , <&key_physical_attrs 100 100  200  200       (-400)     249     310>
+            , <&key_physical_attrs 100 100  199  260       (-400)     249     310>
             , <&key_physical_attrs 100 100  300  200       0     0     0>
             , <&key_physical_attrs 100 100  400  250       0     0     0>
             , <&key_physical_attrs 100 100  500  266       0     0     0>
