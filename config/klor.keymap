@@ -76,7 +76,7 @@
         combo_alt {
           timeout-ms = <50>;
           key-positions = <28 29>;
-          bindings = <&kp ALT>;
+          bindings = <&kp LALT>;
         };
 
         combo_quote {
