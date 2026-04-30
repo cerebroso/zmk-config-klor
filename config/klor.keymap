@@ -54,7 +54,7 @@
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-while-undecided;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33 34 35>; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <5 6 7 8 9 15 18 19 25 26 27 28 29 30 31 32 33 34 35>; // List of keys on the right side of the keyboard
         };
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
@@ -65,7 +65,7 @@
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-while-undecided;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33 34 35>; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 14 20 21 22 23 24 30 31 32 33 34 35>; // List of keys on the left side of the keyboard
         };
 
     };
@@ -137,24 +137,14 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-            base_layer {
-// ┌───────────────────────────────────────────────────────────┐
-label= "BASE"                                                  ;
-// └───────────────────────────────────────────────────────────┘
-/*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    Q    │    W    │    E    │    R    │    T    │                    │    Y    │    U    │    I    │    O    │    P    │
-   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │    A    │    S    │    D    │    F    │    G    │                    │    H    │    J    │    K    │    L    │    ;    │    '    │
-   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   CTRL  │    Z    │    X    │    C    │    V    │    B    ││  MUTE  ││PLY/PSE ││    N    │    M    │    ,    │    .    │    /    │    \    │
-   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │  LALT   │  LOWER  │  RALT   │  SPACE  ││  BSPCE  │  ENTER  │  RAISE  │    DEL  │
-                                 └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
+      base_layer {
+        label= "BASE";
+
         bindings = <
-        &kp B  &kp Y  &kp D         &kp L         &kp SQT  &kp Q      &kp F  &kp O  &kp U  &kp SEMICOLON
-        &kp C  &kp S  &hml LCTRL T  &hml LSHFT R  &kp X    &kp J      &hmr LSHFT N  &hmr RCTRL A  &kp I     &kp H
-        &kp V  &kp W  &kp G         &kp M         &kp Z    &kp MINUS  &kp P         &kp COMMA       &kp DOT &kp K
-                &mt LGUI TAB &kp SPACE  &lt NAV ESC        &lt SYM F1 &kp E  &kp SQT
+        &kp B  &kp Y  &kp D         &kp L         &kp SQT            &kp Q      &kp F         &kp O         &kp U   &kp SEMICOLON
+        &kp C  &kp S  &hml LCTRL T  &hml LSHFT R  &kp X              &kp J      &hmr LSHFT N  &hmr RCTRL A  &kp I   &kp H
+        &kp V  &kp W  &kp G         &kp M         &kp Z              &kp MINUS  &kp P         &kp COMMA     &kp DOT &kp K
+                      &mt LGUI TAB  &kp SPACE     &lt NAV ESC        &lt SYM F1 &kp E         &kp SQT
                 >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_AC_FORWARD C_AC_BACK>;
             };
