@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <110>;
+            require-prior-idle-ms = <100>;
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -60,7 +60,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <110>;
+            require-prior-idle-ms = <100>;
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -144,7 +144,7 @@
         &kp B  &kp Y  &kp D         &kp L         &kp SQT            &kp Q      &kp F         &kp O         &kp U   &kp SEMICOLON
         &kp C  &kp S  &hml LCTRL T  &hml LSHFT R  &kp X              &kp J      &hmr LSHFT N  &hmr RCTRL A  &kp I   &kp H
         &kp V  &kp W  &kp G         &kp M         &kp Z              &kp MINUS  &kp P         &kp COMMA     &kp DOT &kp K
-                      &mt LGUI TAB  &kp SPACE     &lt NAV ESC        &lt SYM F1 &kp E         &kp SQT
+                      &mt LGUI TAB  &kp SPACE     &lt NAV ESC        &lt SYM F1 &kp E         &kp RET
                 >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_AC_FORWARD C_AC_BACK>;
             };
